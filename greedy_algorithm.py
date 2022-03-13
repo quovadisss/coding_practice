@@ -13,3 +13,20 @@ for i in coins:
             
 print(result)
 
+# 1931
+N = int(input())
+a = []
+for i in range(N):
+    start, end = map(int, input().split())
+    a.append([start, end])
+a = sorted(a, key=lambda x: x[0])
+a = sorted(a, key=lambda x: x[1])
+
+e = 0
+count = 0
+for i, j in a:
+    if i >= e:
+        e = j
+        count += 1
+
+print(count)
