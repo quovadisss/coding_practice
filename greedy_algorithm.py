@@ -30,3 +30,16 @@ for i, j in a:
         count += 1
 
 print(count)
+
+# 1026번
+N = int(input())
+a = [int(i) for i in input().split()]
+b = [int(i) for i in input().split()]
+
+result = 0
+for i in range(N):
+    result += min(a) * max(b)
+    a.remove(min(a))
+    b.remove(max(b))
+
+print(result)
