@@ -1,4 +1,3 @@
-# 2022.3.12
 # 11047
 N, K = input().split()
 N = int(N)
@@ -43,3 +42,10 @@ for i in range(N):
     b.remove(max(b))
 
 print(result)
+
+# 1541번
+cal = input()
+num = [sum(c.split("+")) for c in cal.split("-")]
+print(num[0] - sum(num[1:]))
+
+# 5585번
